@@ -1,0 +1,12 @@
+{% extends "core/base.html" %}
+
+{% block stylesheets %}
+    {{ super() }}
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('views.themes', path='css/theme.css') }}">
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    <script defer src="{{ url_for('views.themes', path='js/theme.js') }}"></script>
+{% endblock %}
