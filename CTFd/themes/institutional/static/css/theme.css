@@ -1,0 +1,78 @@
+/* Institutional theme styles */
+:root {
+    --primary-color: #005b96;
+    --accent-color: #28a745;
+    --light-section: #f8f9fa;
+    --text-color: #333333;
+    --text-color-dark: #212529;
+}
+
+body {
+    background-color: #ffffff;
+    color: var(--text-color);
+    font-family: 'Nunito', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-color-dark);
+    font-family: 'Nunito', Arial, sans-serif;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    border-radius: 0.25rem;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: darken(var(--primary-color), 5%);
+    border-color: darken(var(--primary-color), 5%);
+}
+
+.btn-success {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    border-radius: 0.25rem;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+/* Cards */
+.card {
+    border: 1px solid #ddd;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    border-radius: 0.25rem;
+}
+
+/* Light sections */
+.section-light {
+    background-color: var(--light-section);
+    padding: 1rem;
+}
+
+/* Form validation */
+.form-control:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.form-control.is-invalid {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+/* Fade in animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
